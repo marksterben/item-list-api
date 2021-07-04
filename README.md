@@ -1,2 +1,3 @@
 # item-list-api
-Item List Api with Express
+
+Restful API with Express JS
