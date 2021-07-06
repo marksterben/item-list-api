@@ -77,3 +77,19 @@ exports.removeItem = async (req, res) => {
     message: "item successfully removed",
   });
 };
+
+exports.removeAllItem = async (req, res) => {
+  const removedItem = await ItemModel.deleteMany({});
+
+  if (!removedItem) {
+    res.status(400).json({
+      errorMessage: "Remove items failed. Not implemented",
+    });
+
+    return;
+  }
+
+  res.status(200).json({
+    message: "items successfully removed",
+  });
+};
