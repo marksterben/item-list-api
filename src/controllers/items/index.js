@@ -9,7 +9,6 @@ exports.getItems = async (req, res) => {
 exports.addItem = async (req, res) => {
   const { name, count } = req.body;
 
-  // If all or one of the required body is undefined
   if (!name || !count) {
     res.status(400).json({
       errorMessage: "name and count is required",
